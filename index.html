@@ -1,24 +1,50 @@
-<div class="contact">
-  <h2>Contact Us</h2>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Property Dealer</title>
+<style>
+body { font-family: Arial; margin: 0; }
+header { background: black; color: white; padding: 15px; text-align: center; }
+section { padding: 20px; }
+.property { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+</style>
+</head>
 
-  <input type="text" id="name" placeholder="Your Name"><br>
-  <input type="text" id="phone" placeholder="Phone Number"><br>
-  <textarea id="message" placeholder="Message"></textarea><br>
+<body>
 
-  <button onclick="sendToWhatsApp()">Send</button>
+<header>
+<h1>Luxury Property Dealer</h1>
+<p>Find Your Dream Property</p>
+</header>
+
+<section>
+<h2>Properties</h2>
+
+<div class="property">
+<h3>3BHK Flat</h3>
+<p>Location: Delhi</p>
+<p>Price: ₹50 Lakhs</p>
 </div>
 
-<script>
-function sendToWhatsApp() {
-  var name = document.getElementById("name").value;
-  var phone = document.getElementById("phone").value;
-  var message = document.getElementById("message").value;
+<div class="property">
+<h3>Villa</h3>
+<p>Location: Noida</p>
+<p>Price: ₹1.2 Crore</p>
+</div>
 
-  var url = "https://wa.me/91XXXXXXXXXX?text="
-    + "Name: " + name + "%0a"
-    + "Phone: " + phone + "%0a"
-    + "Message: " + message;
+</section>
 
-  window.open(url, '_blank');
-}
-    </script>
+<section>
+<h2>Contact Us</h2>
+
+<form>
+<input type="text" placeholder="Your Name"><br><br>
+<input type="text" placeholder="Phone Number"><br><br>
+<textarea placeholder="Message"></textarea><br><br>
+<button>Send</button>
+</form>
+
+</section>
+
+</body>
+</html>
