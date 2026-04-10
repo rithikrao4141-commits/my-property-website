@@ -1,72 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-   <title>Luxury Property Dealer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Property Dealer</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #0f172a;
-      color: white;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0b0c10;
+  color: white;
+}
 
-    header {
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-      background: black;
-    }
+header {
+  background: black;
+  padding: 15px;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
 
-    .hero {
-      height: 80vh;
-      background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      font-weight: bold;
-    }
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-    .section {
-      padding: 40px;
-      text-align: center;
-    }
+.hero h1 {
+  font-size: 40px;
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+}
 
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
+.section {
+  padding: 30px;
+  text-align: center;
+}
 
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-      width: 250px;
-    }
+.properties {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
+.card {
+  background: #1f2833;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
 
-    button {
-      padding: 10px 20px;
-      background: gold;
-      border: none;
-      cursor: pointer;
-    }
+.card:hover {
+  transform: scale(1.05);
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: black;
-    }
-  </style>
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  padding: 10px;
+}
+
+button {
+  background: gold;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.contact {
+  background: #111;
+  padding: 20px;
+}
+
+input, textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+</style>
 </head>
 
 <body>
@@ -74,33 +103,41 @@
 <header>Luxury Property Dealer</header>
 
 <div class="hero">
-  Find Your Dream Home
+  <h1>Find Your Dream Home</h1>
 </div>
 
 <div class="section">
-  <h2>Properties</h2>
+  <h2>Featured Properties</h2>
 
-  <div class="cards">
+  <div class="properties">
+    
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c">
-      <h3>Villa</h3>
-      <p>₹50 Lakh</p>
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+      <h3>Luxury Villa - ₹1.2 Cr</h3>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
-      <h3>Apartment</h3>
-      <p>₹30 Lakh</p>
+      <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825">
+      <h3>Modern Flat - ₹60 Lakh</h3>
     </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d">
+      <h3>Premium House - ₹90 Lakh</h3>
+    </div>
+
   </div>
 </div>
 
-<div class="section">
+<div class="contact">
   <h2>Contact Us</h2>
-  <button>Call Now</button>
+  <input type="text" placeholder="Your Name"><br>
+  <input type="text" placeholder="Phone Number"><br>
+  <textarea placeholder="Message"></textarea><br>
+  <button>Send</button>
 </div>
 
-<footer>© 2026 Property Dealer</footer>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">💬</a>
 
 </body>
 </html>
