@@ -1,72 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luxury Property Dealer</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0f0f0f;
-  color: white;
-}
-
-header {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-  url('https://images.unsplash.com/photo-1568605114967-8130f3a36994');
-  background-size: cover;
-  background-position: center;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 40px;
-  color: gold;
-}
-
-header p {
-  font-size: 18px;
-}
-
-.btn {
-  padding: 10px 20px;
-  background: gold;
-  color: black;
-  border: none;
-  margin-top: 10px;
-}
-
-.section {
-  padding: 30px;
-}
-
-.properties {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.card {
-  background: #1a1a1a;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.card img {
-  width: 100%;
-}
-
-.card-content {
-  padding: 15px;
-}
-
-.contact input, .contact textarea {
+contact input, .contact textarea {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
@@ -79,7 +11,16 @@ header p {
   background: gold;
   border: none;
 }
-</style>
+</style> .card {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
 </head>
 
 <body>
@@ -129,6 +70,17 @@ header p {
 </form>
 
 </section>
+<script>
+const cards = document.querySelectorAll('.card');
 
-</body>
+window.addEventListener('scroll', () => {
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50){
+      card.classList.add('show');
+    }
+  });
+});
+</script>
+</body> 
 </html>
