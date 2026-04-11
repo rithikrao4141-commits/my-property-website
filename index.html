@@ -60,7 +60,14 @@ p {
   color: #ccc;
   font-size: 14px;
 }
+.card {
+  transition: 0.4s;
+}
 
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+}
 .card {
   box-shadow: 0 5px 20px rgba(255,215,0,0.2);
   border: 1px solid rgba(255,215,0,0.2);
@@ -107,7 +114,10 @@ header p {
 .card-content {
   padding: 15px;
 }
-
+.card {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.05);
+}
 .contact input, .contact textarea {
   width: 100%;
   padding: 10px;
