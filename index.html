@@ -1,88 +1,183 @@
 <!DOCTYPE html>
-<html>
-<head> 
-  <link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luxury Property Dealer</title>
   <link rel="stylesheet" href="style.css">
-<head>
-  <style>
-     text-align: center;
-      padding: 50px;
-      background: rgba(0,0,0,0.5);
-      color: white;
-      border-radius: 15px;
-    }
-
-    .slider-container img {
-      width: 100%;
-      height: auto;
-      border-radius: 15px;
-    }
-
-    button {
-      padding: 12px 25px;
-      margin-top: 10px;
-      border-radius: 30px;
-      border: none;
-      background: gold;
-      color: black;
-      font-weight: bold;
-    }
-    
-  </style>
 </head>
-
 <body>
-
-<!-- HERO SECTION -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Luxury Property Dealer</h1>
-    <p>Find Your Dream Home</p>
-  </div>
-</section>
-
-<!-- SLIDER -->
-  <script>
-let slides = document.querySelectorAll('.slide');
-let current = 0;
-
-function showSlide(index) {
-  slides.forEach((s,i)=> s.style.display = (i===index)?'block':'none');
+  </style>
+  /* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-setInterval(()=>{
-  current = (current+1)%slides.length;
-  showSlide(current);
-}, 3000);
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background: url('images/villa1.jpg') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
-showSlide(current);
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  letter-spacing: 2px;
+}
+
+.hero-content h1 span {
+  color: gold;
+}
+
+.hero-content p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(45deg, gold, orange);
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+/* SLIDER */
+.slider-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.slide-content {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.slide-content h2 {
+  color: gold;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.slide-content p {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.slide-content button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: gold;
+  font-weight: bold;
+}
+  
+<style/>
+  
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Luxury <span>Property</span> Dealer</h1>
+      <p>Find Your Dream Home in Meerut</p>
+      <div class="buttons">
+        <a href="#" class="btn">Explore Properties</a>
+        <a href="https://wa.me/91XXXXXXXXXX" class="btn whatsapp">Book on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDER -->
+  <div class="slider-container">
+    <div class="slide active">
+      <img src="images/villa1.jpg" alt="Villa">
+      <div class="slide-content">
+        <h2>Luxury Villa</h2>
+        <p>₹1.2 Cr • Meerut</p>
+        <button onclick="window.location.href='https://wa.me/91XXXXXXXXXX'">
+          Book on WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="images/apartment1.jpg" alt="Apartment">
+      <div class="slide-content">
+        <h2>Modern Apartment</h2>
+        <p>₹45 Lakh • Delhi NCR</p>
+        <button onclick="window.location.href='https://wa.me/91XXXXXXXXXX'">
+          Book on WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS for auto slider -->
+  <script>
+    let slides = document.querySelectorAll('.slide');
+    let current = 0;
+    function showSlide(index) {
+      slides.forEach((s,i) => s.style.display = (i===index)? 'block' : 'none');
+    }
+    setInterval(() => {
+      current = (current+1) % slides.length;
+      showSlide(current);
+    }, 3000);
+    showSlide(current);
   </script>
-<div class="slider-container">
-
-  <div class="slide active">
-    <img src="images/villa1.jpg" alt="Villa">
-    <div class="slide-content">
-      <h2>Luxury Villa</h2>
-      <p>₹1.2 Cr • Meerut</p>
-      <button onclick="window.location.href='https://wa.me/91XXXXXXXXXX'">
-        Book on WhatsApp
-      </button>
-    </div>
-  </div>
-
-  <div class="slide">
-    <img src="images/apartment1.jpg" alt="Apartment">
-    <div class="slide-content">
-      <h2>Modern Apartment</h2>
-      <p>₹45 Lakh • Delhi NCR</p>
-      <button onclick="window.location.href='https://wa.me/91XXXXXXXXXX'">
-        Book on WhatsApp
-      </button>
-    </div>
-  </div>
-
-</div>
 
 </body>
 </html>
