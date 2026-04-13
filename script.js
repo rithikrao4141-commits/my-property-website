@@ -50,4 +50,5 @@ header nav a:hover {color:#ffd700; text-shadow:0 0 5px #ffd700;}
 
 /* Footer */
 footer {padding:20px; text-align:center; background:#111; color:#fff;}
+
 </style>
