@@ -65,4 +65,11 @@ header nav a {
 /* Footer */
 footer {padding:20px; text-align:center; background:#111; color:#fff;}
 
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
 </style>
