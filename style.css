@@ -114,6 +114,14 @@ nav a {
   border-radius:50%;
   font-size:20px;
 }
+
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:20px;
+  background:#000;
+}
 .whatsapp-btn {
   display:inline-block;
   margin-top:20px;
@@ -122,11 +130,4 @@ nav a {
   color:white;
   text-decoration:none;
   border-radius:8px;
-}
-
-/* FOOTER */
-footer {
-  text-align:center;
-  padding:20px;
-  background:#000;
 }
