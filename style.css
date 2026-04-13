@@ -72,4 +72,41 @@ footer {padding:20px; text-align:center; background:#111; color:#fff;}
 .slide.active {
   display: block;
 }
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
+    width: 200px;
+    flex-direction: column;
+    display: none;
+    padding: 20px;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
 </style>
