@@ -6,10 +6,23 @@
 body {background:#0d0d0d; color:#fff;}
 
 /* Header */
-header {display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:rgba(0,0,0,0.9); position:sticky; top:0; z-index:10;}
-header .logo {font-size:28px; font-weight:bold; color:#ffd700; text-shadow:0 0 8px #ffd700;}
-header nav a {color:#fff; margin-left:25px; text-decoration:none; transition:0.3s;}
-header nav a:hover {color:#ffd700; text-shadow:0 0 5px #ffd700;}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(0,0,0,0.9);
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header nav a {
+  font-size: 14px;
+}
 
 /* Slider */
 .slider {position:relative; overflow:hidden; height:500px;}
