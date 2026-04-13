@@ -114,6 +114,15 @@ nav a {
   border-radius:50%;
   font-size:20px;
 }
+.whatsapp-btn {
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 20px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+}
 
 /* FOOTER */
 footer {
