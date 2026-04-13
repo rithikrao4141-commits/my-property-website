@@ -172,3 +172,39 @@ footer {
   border-radius: 8px;
   text-align: center;
 }
+/* PREMIUM SLIDER */
+.slider {
+  height: 90vh;
+  position: relative;
+}
+
+.slide img {
+  filter: brightness(60%);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+}
+
+.overlay h2 {
+  font-size: 40px;
+  color: gold;
+  font-weight: bold;
+}
+
+.slide.active .overlay h2 {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
