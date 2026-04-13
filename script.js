@@ -46,3 +46,20 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
   });
 });
+
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: rgba(0,0,0,0.95);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+}
