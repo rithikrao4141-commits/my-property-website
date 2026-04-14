@@ -1,4 +1,4 @@
-se* {margin:0; padding:0; box-sizing:border-box; font-family:Arial;}
+* {margin:0; padding:0; box-sizing:border-box; font-family:Arial;}
 
 body {background:#0d0d0d; color:white;}
 
@@ -295,19 +295,7 @@ footer {
 .nav-links li a:hover {
   color: gold;
 }
-/* PREMIUM NAVBAR */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
+
 
 /* LOGO */
 .logo {
@@ -345,7 +333,7 @@ footer {
   .nav-links {
     position: absolute;
     top: 70px;
-    right: 0;
+    left: 0;
     background: black;
     width: 100%;
     flex-direction: column;
