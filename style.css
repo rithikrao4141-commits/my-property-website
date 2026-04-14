@@ -3,15 +3,7 @@
 body {background:#0d0d0d; color:white;}
 
 /* NAVBAR GLASS */
-header {
-  display:flex;
-  justify-content:space-between;
-  padding:15px 25px;
-  position:fixed;
-  width:100%;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  z-index:1000;
+
 }
 
 .logo {color:gold; font-size:22px;}
