@@ -1,4 +1,4 @@
-* {margin:0; padding:0; box-sizing:border-box; font-family:Arial;}
+se* {margin:0; padding:0; box-sizing:border-box; font-family:Arial;}
 
 body {background:#0d0d0d; color:white;}
 
@@ -215,4 +215,25 @@ footer {
 
 .slide.active {
   opacity: 1;
+}
+/* DOTS */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  background: gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: gold;
 }
