@@ -244,6 +244,9 @@ footer {
   z-index: 1000;
   box-sizing: border-box;
 }
+nav {
+  margin-left: auto;
+}
 
 /* LOGO LEFT */
 .logo {
@@ -273,7 +276,8 @@ footer {
   color: white;
   cursor: pointer;
 }
-
+margin-left: auto;
+}
 /* MOBILE FIX 🔥 */
 @media(max-width: 768px) {
 
