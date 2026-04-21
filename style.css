@@ -406,7 +406,7 @@ body {
 .nav-links a {
   pointer-events: auto;
 }
-/* 🔥 GAP FIX CODE START */
+
 
 body {
   margin: 0;
@@ -423,4 +423,3 @@ body {
   padding-top: 0;
 }
 
-/* 🔥 GAP FIX CODE END */
