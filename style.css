@@ -281,20 +281,33 @@ footer {
     display: block;
   }
 
+ /* NAV LINKS DEFAULT (hidden on mobile) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
   .nav-links {
     position: absolute;
     top: 60px;
-    left: 0;   /* FIXED */
+    left: 0;
     width: 100%;
     background: black;
     flex-direction: column;
     text-align: center;
-    display: none;
+
+    display: none; /* hidden by default */
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex; /* show when clicked */
   }
+
+} 
 
   .nav-links {
     position: absolute;
