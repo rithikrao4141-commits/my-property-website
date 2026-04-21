@@ -199,6 +199,7 @@ footer {
     transform: translateY(0);
     opacity: 1;
   }
+}
 /* SMOOTH FADE */
 .slide {
   opacity: 0;
