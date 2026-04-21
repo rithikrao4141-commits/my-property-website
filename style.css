@@ -393,3 +393,11 @@ body {
 
 .prev { left: 15px; }
 .next { right: 15px; }
+
+.menu-toggle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
