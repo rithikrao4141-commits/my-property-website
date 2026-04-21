@@ -249,7 +249,9 @@ footer {
   font-size: 20px;
   font-weight: bold;
 }
-
+.navbar {
+  position: relative;
+}
 /* NAV LINKS (DESKTOP) */
 .nav-links {
   list-style: none;
